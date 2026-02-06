@@ -1,1 +1,9 @@
+# macOS
 *.DS_Store
+
+*.class
+target/
+.idea/
+*.iml
+.vscode/
+bin/
