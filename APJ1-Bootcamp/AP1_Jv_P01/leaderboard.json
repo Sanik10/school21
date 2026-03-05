@@ -1,0 +1,56 @@
+[ {
+  "name" : "Sanik10",
+  "treasure" : 238,
+  "level" : 2,
+  "kills" : 1,
+  "eats" : 0,
+  "elixirs" : 0,
+  "scroll" : 0,
+  "hit" : 1,
+  "miss" : 7,
+  "cells" : 172
+}, {
+  "name" : "Player",
+  "treasure" : 248,
+  "level" : 7,
+  "kills" : 2,
+  "eats" : 0,
+  "elixirs" : 0,
+  "scroll" : 2,
+  "hit" : 6,
+  "miss" : 2,
+  "cells" : 254
+}, {
+  "name" : "Player",
+  "treasure" : 0,
+  "level" : 21,
+  "kills" : 0,
+  "eats" : 0,
+  "elixirs" : 0,
+  "scroll" : 0,
+  "hit" : 3,
+  "miss" : 9,
+  "cells" : 195
+}, {
+  "name" : "Player",
+  "treasure" : 0,
+  "level" : 21,
+  "kills" : 0,
+  "eats" : 0,
+  "elixirs" : 0,
+  "scroll" : 0,
+  "hit" : 6,
+  "miss" : 12,
+  "cells" : 32
+}, {
+  "name" : "Player",
+  "treasure" : 62,
+  "level" : 2,
+  "kills" : 0,
+  "eats" : 0,
+  "elixirs" : 0,
+  "scroll" : 0,
+  "hit" : 0,
+  "miss" : 0,
+  "cells" : 0
+} ]
