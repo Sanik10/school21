@@ -1,9 +1,49 @@
-# macOS
-*.DS_Store
-
-*.class
-target/
-.idea/
-*.iml
-.vscode/
+### --- Java & Gradle ---
+.gradle/
+build/
+!gradle-wrapper.jar
 bin/
+out/
+
+### --- IntelliJ IDEA ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea/runConfigurations/
+
+### --- Eclipse ---
+.metadata/
+.classpath
+.project
+.settings/
+*.launch
+
+### --- VS Code ---
+.vscode/
+*.code-workspace
+
+### --- OS Specific (macOS, Windows) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### --- Spring Boot & Environment ---
+*.log
+*.temp
+.apt_generated/
+.factorypath
+# Секреты и локальные конфиги
+.env
+.env.local
+application-local.properties
+application-local.yml
+
+### --- Other ---
+target/
+*.class
