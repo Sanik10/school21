@@ -1,12 +1,15 @@
 package ru.springxo.domain.service;
 
+import ru.springxo.datasource.repository.GameRepository;
 import ru.springxo.domain.model.Board;
 import ru.springxo.domain.model.Game;
 
-@SuppressWarnings("unused")
 public class MinimaxServiceImpl implements TicTacToeService {
 
-    public MinimaxServiceImpl() {
+    private final GameRepository gameRepository;
+
+    public MinimaxServiceImpl(GameRepository gameRepository) {
+        this.gameRepository = gameRepository;
     }
 
     @Override
@@ -119,9 +122,7 @@ public class MinimaxServiceImpl implements TicTacToeService {
     }
 
     private boolean hasMovesLeft(int[][] board) {
-        for (int[] row : board)
-            for (int cell : row)
-                if (cell == 0) return true;
+        for (int[] row : board) for (int cell : row) if (cell == 0) return true;
         return false;
     }
 
