@@ -1,231 +1,214 @@
-# Project 01 — Java_Bootcamp
+# Project 01 — Java_Bootcamp  
 
-**Summary:**
-In this project, you will get acquainted with the basic features of the Java language.
+Резюме: в этом проекте ты познакомишься с основными функциями языка **Java**. 
 
-💡 [Click here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) to share your feedback on this project. It’s anonymous and will help our team improve the course. We recommend filling out the survey immediately after completing the project.
+## Содержание
+ 1. [Chapter I](#chapter-i)   
+     - [Инструкция](#инструкция)   
+ 2. [Chapter II](#chapter-ii)  
+     - [Общая информация](#общая-информация)  
+ 3. [Chapter III](#chapter-iii)      
+     - [Проект: Умные утилиты](#проект-умные-утилиты)
+     - [Задание 0. Создание проекта](#задание-0-создание-проекта)  
+     - [Задание 1. Нахождение периметра треугольника](#задание-1-нахождение-периметра-треугольника)  
+     - [Задание 2. Нахождение часов, минут и секунд](#задание-2-нахождение-часов-минут-и-секунд)  
+     - [Задание 3. Поиск числа Фибоначчи](#задание-3-поиск-числа-фибоначчи)  
+     - [Задание 4. Поиск среднего арифметического отрицательных чисел](#задание-4-поиск-среднего-арифметического-отрицательных-чисел)  
+     - [Задание 5. Поиск чисел, у которых совпадает первая и последняя цифра](#задание-5-поиск-чисел-у-которых-совпадает-первая-и-последняя-цифра)  
+     - [Задание 6. Сортировка массива выбором](#задание-6-сортировка-массива-выбором)  
+     - [Задание 7. Поиск максимального и минимального значений](#задание-7-поиск-максимального-и-минимального-значений)
+     - [Задание 8. Упорядоченная последовательность по возрастанию](#задание-8-упорядоченная-последовательность-по-возрастанию) 
+     - [Задание 9. Фильтрация строк](#задание-9-фильтрация-строк)  
+     - [Задание 10. Поиск имен совершеннолетних пользователей](#задание-10-поиск-имен-совершеннолетних-пользователей)  
 
 
-## Contents
-
-  - [Chapter I](#chapter-i)
-    - [Instructions](#instructions)
-  - [Chapter II](#chapter-ii)
-    - [General Information](#general-information)
-  - [Chapter III](#chapter-iii)
-    - [Project. Smart Utilities](#project-smart-utilities)
-    - [Task 0. Creating the Project](#task-0-creating-the-project)
-    - [Task 1. Calculating the Perimeter of a Triangle](#task-1-calculating-the-perimeter-of-a-triangle)
-    - [Task 2. Calculating Hours, Minutes, and Seconds](#task-2-calculating-hours-minutes-and-seconds)
-    - [Task 3. Finding a Fibonacci Number](#task-3-finding-a-fibonacci-number)
-    - [Task 4. Calculating the Arithmetic Mean of Negative Numbers](#task-4-calculating-the-arithmetic-mean-of-negative-numbers)
-    - [Task 5. Finding Numbers with Matching First and Last Digits](#task-5-finding-numbers-with-matching-first-and-last-digits)
-    - [Task 6. Selection Sort of an Array](#task-6-selection-sort-of-an-array)
-    - [Task 7. Finding the Maximum and Minimum Values](#task-7-finding-the-maximum-and-minimum-values)
-    - [Task 8. Ascending Order Sequence](#task-8-ascending-order-sequence)
-    - [Task 9. String Filtering](#task-9-string-filtering)
-    - [Task 10. Finding Names of Adult Users](#task-10-finding-names-of-adult-users)
 
 ## Chapter I
+## Инструкция
 
-### Instructions
-
-1. Throughout the course, you will experience uncertainty and a severe lack of information — this is normal. Remember that the repository and Google are always available to you, as are your peers and Rocket.Chat. Communicate. Search. Rely on common sense. Do not be afraid of making mistakes.
-1. Pay attention to sources of information. Verify, think, analyze, compare.
-1. Read the assignments carefully. Reread them several times.
-1. It’s best to read the examples carefully as well. They may contain something not explicitly stated in the assignment itself.
-1. You might encounter inconsistencies when something new in the task or example contradicts what you already know. If that happens, try to figure it out. If you fail, make a note under “open questions” and resolve it during your work. Do not leave open questions unresolved.
-1. If a task seems unclear or unachievable, it only seems that way. Try decomposing it. Most likely, individual parts will become clearer.
-1. Along the way, you’ll encounter many different tasks. Those marked with an asterisk (\*) are for more meticulous learners. They are of higher complexity and are not mandatory, but if you do them, you’ll gain additional experience and knowledge.
-1. Do not try to fool the system or those around you. You’ll only be fooling yourself.
-1. Have a question? Ask the neighbor on your right. If that doesn’t help, ask the neighbor on your left.
-1. When using someone’s help, always make sure you understand why, how, and what for. Otherwise, that help is meaningless.
-1. Always push only to the **develop** branch! The **master** branch will be ignored. Work in the **src** directory.
-1. Your directory should not contain any files other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай. 
+3. Внимательно читай задания. Перечитай несколько раз. 
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными. 
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными. 
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
 ## Chapter II
+## Общая информация
 
-### General Information
+**Java** — это быстрый, безопасный и надежный язык программирования для всего: от мобильных приложений и корпоративного ПО до приложений для работы с большими данными и серверных технологий.
 
-**Java** is a fast, secure, and reliable programming language for everything from mobile applications and enterprise software to big data applications and server technologies.
+История Java началась еще в 1991 году, когда Патрик Ноутон, Билл Джой и Джеймс Гослинг начали работу над собственным проектом. Основной целью проекта было создание аппаратно-программной платформы нового поколения, использование которой не требовало бы специальных знаний. Речь шла о создании «компьютера для людей», максимально надежного и при этом простого в управлении. Проект получил название Green. В ходе работ возникла потребность в новом языке программирования, который был бы максимально универсальным и мог бы применяться на любых платформах. Так появился Oak.
 
-The history of Java began in 1991 when Patrick Naughton, Bill Joy, and James Gosling began working on their own project. The main goal of the project was to create a next-generation hardware-software platform that would require no special knowledge to use. The idea was to create a "computer for people" that was highly reliable yet easy to use. The project was called "Green". During the work, the need arose for a new programming language that was as universal as possible and could be used on any platform. Thus "Oak" was born.
+Язык программирования Java в том виде, в котором мы его знаем, появился далеко не сразу. Несколько лет подряд разработчики пытались внедрить новую технологию в различные сферы, начиная от интерактивного телевиденья и заканчивая игровыми приставками, но везде потерпели неудачу. Первым продвижением с мертвой точки стало создание в 1994 году браузера WebRunner, который был способен отображать интерактивные программы-апплеты, встроенные непосредственно в страницы. 
 
-The Java programming language as we know it today did not appear immediately. For several years, developers tried to implement the new technology in various fields, from interactive television to game consoles, but failed everywhere. The first breakthrough came in 1994 with the creation of the WebRunner browser, which was capable of displaying interactive applets embedded directly into Web pages.
+Новый браузер набирал популярность, и в итоге в 1995 году Oak получил новое имя. Так родился язык программирования Java таким, каким мы его знаем. Браузер переименовался в HotJava, однако его существование уже подходило к концу. А вот Java начал победное шествие по миру: сначала, 23 мая 1995 года, он был официально представлен и интегрирован в популярнейшем браузере того времени Netscape Navigator 2.0, в 1996 году его начал поддерживать известный сейчас каждому Microsoft Internet Explorer, тогда еще в версии 3.0.
 
-As the new browser gained popularity, "Oak" was given a new name in 1995. This was the birth of the Java programming language as we know it today. The browser was renamed "HotJava", but its existence soon came to an end. Meanwhile, Java began its triumphant march around the world: first, on May 23, 1995, it was officially introduced and integrated into the popular browser of the time, Netscape Navigator 2.0; in 1996, it began to be supported by what everyone now knows as Microsoft Internet Explorer (then in version 3.0).
+В 1997 году Java претерпел ряд существенных обновлений, разделился на несколько отдельных платформ и начал приобретать все более и более широкую популярность, которая не угасла и по сей день.
 
-In 1997, Java underwent several major updates, was split into several different platforms, and began to grow in popularity — a popularity that has not waned to this day.
+**Главные преимущества Java:**
 
-**Main Advantages of Java:**
+1. Портативность: программы на Java могут выполняться на любой машине, которая поддерживает виртуальную машину Java (JVM).
+2. Объектно-ориентированность: Java является полностью объектно-ориентированным языком, что позволяет создавать модульные и масштабируемые программы. Объектно-ориентированный подход способствует повторному использованию кода и облегчает его сопровождение.
+3. Безопасность: Java предоставляет механизмы безопасности, такие как контроль доступа и проверка типов, что позволяет создавать более надежные приложения. Также виртуальная машина Java (JVM) обеспечивает изоляцию программ от операционной системы.
+4. Многозадачность: Java поддерживает многозадачность, что позволяет разрабатывать эффективные и отзывчивые приложения, способные выполнять несколько задач одновременно.
+5. Большая стандартная библиотека: Java поставляется с обширной стандартной библиотекой, включающей в себя классы и методы для решения широкого спектра задач, что упрощает разработку.
+6. Поддержка множества библиотек и фреймворков: существует множество библиотек и фреймворков, построенных на Java, таких как Spring, Hibernate, Apache Struts и др., что облегчает создание сложных приложений.
+7. Широкое распространение и сообщество: Java является одним из самых популярных языков программирования, и у него огромное сообщество разработчиков. Это означает, что есть множество ресурсов, документации и накопленного опыта, доступных для поддержки разработчиков.
+8. Простота использования: Java обладает относительно простым синтаксисом, что упрощает разработку и понимание кода, особенно для новичков.
 
-1. **Portability:** Java programs can run on any machine that supports the Java Virtual Machine (JVM).
-1. **Object-Oriented:** Java is a fully object-oriented language that allows the creation of modular and scalable programs. The object-oriented approach encourages code reuse and simplifies maintenance.
-1. **Security:** Java provides security mechanisms, such as access control and type checking, that enable the creation of more reliable applications. The Java Virtual Machine (JVM) also provides isolation of programs from the operating system.
-1. **Multithreading:** Java supports multithreading, enabling the development of efficient and responsive applications capable of performing multiple tasks simultaneously.
-1. **Extensive Standard Library:** Java comes with a comprehensive standard library of classes and methods to solve a wide range of problems, simplifying development.
-1. **Support for Numerous Libraries and Frameworks:** There are many libraries and frameworks built on Java, such as Spring, Hibernate, Apache Struts, etc., which facilitate the creation of complex applications.
-1. **Wide Adoption and Community:** Java is one of the most popular programming languages and has a huge developer community. This means that there are plenty of resources, documentation, and expertise available to support developers.
-1. **Ease of Use:** Java has a relatively simple syntax, which makes it easy to develop and understand code, especially for beginners.
-
-**Topics to Explore:**
-
-- Entry point of the program, program structure;
-- Compilation/interpretation of the program;
-- Control structures of the language (sequential execution, branching, looping);
-- Primitive data types (assignment, size, memory representation, operations);
-- Composite data types (assignment, size, memory representation, operations);
-- Input/output organization (stdin, stdout);
-- Automatic, static, and dynamic memory, garbage collection;
-- Complex data structures (templates and generics).
+### Темы для изучения:
+- точка входа в программу, структура программы;
+- компиляция/интерпретация программы;
+- управляющие структуры языка (следование, ветвление, повторение);
+- простые типы данных (назначение, размер, представление в памяти, операции);
+- составные типы данных (назначение, размер, представление в памяти, операции);
+- организация ввода-вывода (stdin-stdout);
+- автоматическая, статическая и динамическая память, сборщик мусора;
+- сложные структуры данных (шаблоны и дженерики).
 
 ## Chapter III
+### Проект «Умные утилиты»
+Рассматриваются основные функции языка при помощи проекта, который представляет собой набор инструментов для решения разных типов задач.
 
-### Project: Smart Utilities
+**Внимание!** Каждую задачу оформляй в качестве отдельного проекта. Например, `T01/src/exercise0`, `T01/src/exercise1`, ... , `T01/src/exerciseN-1`, где *N* — количество задач. Если предыдущее задание необходимо для следующего, просто скопируй предыдущий проект в директорию следующего и продолжай разработку в нем.
 
-This project covers the basic features of the language through a set of tools for solving various types of tasks.
+## Задание 0. Создание проекта
+В IntelliJ Idea создай новый проект: 
+- Выбери язык Java.
+- Выбери систему сборки Gradle.
+- Выбери JDK 18; если такого нет, то загрузи любой JDK 18 версии.
+- Выбери для Gradle DSL язык Kotlin.
 
-**Attention!**
-Each task should be organized as a separate project. For example: `T01/src/exercise0`, `T01/src/exercise1`, ..., `T01/src/exerciseN-1`, where *N* is the number of tasks. If the previous task is necessary for the next one, simply copy the previous project into the next directory and continue development there.
+## Задание 1. Нахождение периметра треугольника
+Разработай математический модуль, который определяет периметр треугольника.
 
-### Task 0. Creating the Project
+- Программа считывает координаты вершин треугольника. 
+- Программа работает с вещественными числами.
+- Программа вычисляет и выводит периметр треугольника, если из введенных вершин образуется треугольник.
+- Если из введенных вершин не образуется треугольник, то программа выводит: «It's not a triangle».
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Точность: 3 знака после запятой.
+- Используй только простые типы.
 
-In IntelliJ IDEA, create a new project:
-
-- Select the Java language.
-- Select the Gradle build system.
-- Select JDK 18; if it's not available, download any JDK 18 version.
-- For Gradle DSL, select Kotlin.
-
-### Task 1. Calculating the Perimeter of a Triangle
-
-Develop a mathematical module that calculates the perimeter of a triangle.
-
-- The program reads the coordinates of the vertices of the triangle.
-- The program uses floating point numbers.
-- The program calculates and outputs the perimeter of the triangle if the entered vertices form a triangle.
-- If the entered vertices do not form a triangle, the program outputs "It's not a triangle".
-- The program does not crash on wrong input; it prints: "Could not parse a number. Please try again" and retry the input.
-- Accuracy: 3 decimal places.
-- Use primitive types only.
-
-|**Input**|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 1.0 <br/>  2.0 <br/> 2.0 <br/> 1.0 <br/> 5.0 <br/> 5.0 <br/> | Perimeter: 11.414 |
 | 2.0 <br/>  1.0 <br/> 2.0 <br/> 1.0 <br/> 2.0 <br/> 1.0 <br/> | It's not a triangle |
 | 2.0 <br/> 1.0 <br/> 2.0 <br/> 1.0 <br/> 3.0 <br/> 1.0 <br/> | It's not a triangle |
 
-### Task 2. Calculating Hours, Minutes, and Seconds
 
-Develop a math module that converts seconds to the format hh:mm:ss, i.e., calculates the number of hours, minutes, and seconds.
+## Задание 2. Нахождение часов, минут и секунд
+Разработай математический модуль, который переводит секунды к формату `hh:mm:ss` находит, то есть находит количество часов, минут и секунд.
 
-- The program reads in the number of seconds.
-- The program works with integers.
-- The program calculates and outputs the number of hours, minutes and seconds in the format hh:mm:ss.
-- If a number of seconds less than 0 is entered, it should output: "Incorrect time."
-- The program will not crash on wrong input, it will print: "Could not parse a number. Please try again" and retry the input.
-- The program should have the following structure:
-  - an input method;
-  - a method for calculating hours, minutes, and seconds;
-  - an output method;
-  - all the above methods should be called from main.
-- Use primitive types only.
+- Программа считывает секунды. 
+- Программа работает с целыми числами.
+- Программа вычисляет и выводит количество часов, минут и секунд в формате `hh:mm:ss`.
+- Если введено количество секунд меньше 0, то должно выводиться: «Incorrect time».
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Должна быть следующая структура программы:
+  - метод ввода;
+  - метод нахождения часов, минут и секунд;
+  - метод вывода.
+- Все упомянутые выше методы должны вызываться из main.
+- Используй только простые типы.
 
-|**Input**|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 3599 | 00:59:59 |
 | 3601 | 01:00:01 |
 | -100 | Incorrect time |
 
-### Task 3. Finding a Fibonacci Number
+## Задание 3. Поиск числа Фибоначчи
+Разработай математический модуль, который находит n число Фибоначчи.
 
-Develop a math module that finds the n-th Fibonacci number.
+- Программа считывает порядковый номер числа Фибоначчи. 
+- Программа работает с целыми числами.
+- Предусмотри выход за пределы памяти.
+- Для нахождения числа Фибоначчи используй рекурсивный подход.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Используй только простые типы.
 
-- The program reads the ordinal number of the Fibonacci number.
-- The program works with integers.
-- Consider memory overflow.
-- Use a recursive approach to find the Fibonacci number.
-- The program does not crash on wrong input; it prints: "Could not parse a number. Please try again" and retry the input.
-- Use only primitive types.
-
-|**Input**|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 10 | 55 |
 | 100000000 | Too large n |
 
-### Task 4. Calculating the Arithmetic Mean of Negative Numbers
+## Задание 4. Поиск среднего арифметического отрицательных чисел
+Разработай математический модуль, который находит среднее арифметическое отрицательных чисел.
 
-Develop a math module that calculates the arithmetic mean of negative numbers.
+- Программа считывает количество чисел. 
+- Программа считывает каждое новое число в массив.
+- Программа работает с целыми числами.
+- Если отрицательные числа есть, то должно выводиться их среднее арифметическое, иначе: «There are no negative elements».
+- Если введено отрицательное количество чисел или ноль, то должно выводиться: «Input error. Size <= 0».
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Применяй цикл с предусловием for.
+- Используй только простые типы.
 
-- The program reads the number of numbers.
-- The program reads each new number into an array.
-- The program works with integers.
-- If there are negative numbers, the program prints their arithmetic mean, otherwise it prints: "There are no negative elements".
-- If a negative number or zero is entered as the count, the program should print "Input error. Size <= 0".
-- The program will not crash on wrong input; it will print: "Could not parse a number. Please try again" and retry the input.
-- Use a for-loop with a precondition.
-- Use only primitive types.
-
-|**Input**|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 4 <br/> 1 2 3 4 | There are no negative elements |
 | -1 | Input error. Size <= 0 |
 | 4 <br/> 1 -2 3 -4 | -3 |
 
-### Task 5. Finding Numbers with Matching First and Last Digits
+## Задание 5. Поиск чисел, у которых совпадает первая и последняя цифра
+Разработай математический модуль, ищущий числа, у которых совпадает первая и последняя цифра.
 
-Develop a math module that finds numbers where the first and last digits are the same.
+- Программа считывает количество чисел. 
+- Программа считывает каждое новое число в массив.
+- Программа работает с целыми числами.
+- Если есть числа, у которых совпадает первая и последняя цифра, то должно выводиться их, иначе: «There are no such elements».
+- Числа, у которых совпадает первая и последняя цифра, сохраняй в отдельный массив.
+- Если введено отрицательное количество чисел или ноль, то должно выводиться: «Input error. Size <= 0».
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Используй цикл с предусловием while.
+- Должен быть выделен отдельный метод для определения числа, у которого совпадает первая и последняя цифра.
+- Используй только простые типы.
 
-- The program reads the number of numbers.
-- The program reads each new number into an array.
-- The program works with integers.
-- If there are numbers whose first and last digits are the same, the program should print them, otherwise it will print: "There are no such items".
-- Numbers with matching first and last digits should be stored in a separate array.
-- If a negative number or zero is entered as the count, the program should print: "Input error. Size <= 0."
-- The program will not crash on incorrect input; it will print: "Could not parse a number. Please try again" and retry the input.
-- Use a while-loop with a precondition.
-- There must be a separate method to determine if a number has matching first and last digits.
-- Use primitive types only.
-
-|**Input**|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 4 <br/> 100 200 300 400 | There are no such elements |
 | -1 | Input error. Size <= 0 |
 | 5 <br/> 1 202 300 200005 301213 | 1 202 301213 |
 
-### Task 6. Selection Sort of an Array
+## Задание 6. Сортировка массива выбором
+Разработай математический модуль, который производит сортировку массива выбором по возрастанию.
 
-Develop a math module that performs an ascending sort on an array.
+- Программа считывает количество чисел. 
+- Программа считывает каждое новое число в массив.
+- Программа работает с вещественными числами.
+- Программа выводит отсортированный массив выбором по возрастанию.
+- Если введено отрицательное количество чисел или ноль, то должно выводиться: «Input error. Size <= 0»
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Должен быть выделен отдельный метод для сортировки выбором массива по возрастанию.
+- Нельзя использовать библиотечные реализации, нужно написать свою.
+- Используй только простые типы.
 
-- The program reads the number of numbers.
-- The program reads each new number into an array.
-- The program works with floating-point numbers.
-- The program outputs the sorted array in ascending order.
-- If a negative number or zero is entered as the count, the program should print: "Input error. Size <= 0."
-- The program will not crash on incorrect input; it will print: "Could not parse a number. Please try again" and retry the input.
-- There must be a separate method for sorting the array in ascending order.
-- You cannot use built-in library implementations; you must write your own.
-- Use primitive types only.
-
-|**Input**|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 4 <br/> 100.0 50.0 60.0 10.0 | 10.0 50.0 60.0 100.0 |
 | -1 | Input error. Size <= 0 |
 
-### Task 7. Finding the Maximum and Minimum Values
+## Задание 7. Поиск максимального и минимального значений
+Разработай математический модуль, который производит поиск максимального и минимального значений в массиве.
 
-Develop a math module that finds the maximum and minimum values in an array.
-
-- The program reads the path to a file.
-- The program reads the count of numbers from the file.
-- The program reads each new number from the file into an array until the count is exceeded or the end of the file is reached.
-- The program works with floating-point numbers.
-- The program prints the number of numbers read and the numbers themselves.
-- The program saves the minimum and maximum values found to a file named result.txt and prints them to the console: "Saving min and max values to file".
-- If fewer numbers are read than specified, it should print: "Input error. Insufficient number of items".
-- If the file does not exist, it should print: "Input error. File doesn't exist".
-- If a negative number or zero is entered as the count, it should print: "Input error. Size <= 0".
-- The program will not crash on incorrect input; it will skip the incorrect input and continue with the next value.
+- Программа считывает путь до файла.
+- Программа считывает из файла количество чисел. 
+- Программа считывает каждое новое число из файла в массив, пока не превысит количество чисел либо не достигнет конца файла.
+- Программа работает с вещественными числами.
+- Программа выводит считанное количество чисел и сами числа.
+- Программа сохраняет в файл `result.txt` найденные минимум и максимум и выводит в консоль сообщение: «Saving min and max values in file».
+- Если считалось чисел меньше, чем указано в количестве, должно выводиться: «Input error. Insufficient number of elements».
+- Если файла не существует, то должно выводиться: «Input error. File doesn't exist».
+- Если отрицательное количество чисел или ноль, то должно выводиться: «Input error. Size <= 0».
+- Программа не завершается с ошибкой при некорректных входных данных. Она пропускает ошибочный ввод и переходит к следующему считыванию значения.
 
 | file1.txt |
 | ------ |
@@ -243,7 +226,7 @@ Develop a math module that finds the maximum and minimum values in an array.
 | ------ |
 | 5 <br/> 20.0 50.0 f 60.0 g 10.0 1.0|
 
-|Input|Console Output:|For result.txt output:|
+| Входные данные | Выходные данные в консоль | Выходные данные в result.txt |
 | ------ | ------ | ------ |
 | file1.txt | 4 <br/> 100.0 50.0 60.0 10.0 <br/> Saving min and max values in file | 10.0 100.0 |
 | file2.txt | Input error. Size <= 0 | |
@@ -251,56 +234,56 @@ Develop a math module that finds the maximum and minimum values in an array.
 | file4.txt | 5 <br/> 20.0 50.0 60.0 10.0 1.0 <br/> Saving min and max values in file | 1.0 60.0 |
 | fileIsNotExist.txt | Input error. File doesn't exist | |
 
-### Task 8. Ascending Order Sequence
+## Задание 8. Упорядоченная последовательность по возрастанию
+Разработай математический модуль, который определяет, является ли последовательность упорядоченной по возрастанию.
 
-Develop a math module that determines whether a sequence is in ascending order.
+- Программа считывает каждое новое число.
+- Программа работает с целыми числами.
+- Нельзя использовать массивы.
+- Программа должна определить, является ли последовательность упорядоченной по возрастанию. В случае отрицательного ответа программа должна определить порядковый номер первого числа, нарушающего такую упорядоченность, и вывести: «The sequence is not ordered from the ordinal number of the number (порядковый номер)».
+- Программа завершает проверку введенной последовательности при некорректном вводе и выводит: «The sequence is ordered in ascending order», если было введено хотя бы одно число.
+- Если не ввели ни одного числа, то должно выводиться: «Input error».
+- Используй только простые типы.
 
-- The program reads every new number.
-- The program works with integers.
-- You cannot use arrays.
-- The program should determine if the sequence is in ascending order. If not, it should print: "The sequence is not ordered from the ordinal number of the number [number]", indicating the ordinal number of the first number that breaks the order.
-- The program stops checking the entered sequence if it is incorrect, and outputs the following message: "The sequence is in ascending order" if at least one number was entered.
-- If no numbers have been entered, it should print: "Input error".
-- Use primitive types only.
-
-|**Input**|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 1 2 3 5 4 | The sequence is not ordered from the ordinal number of the number 4 |
 | а | Input error |
 | 10 20 50 80 90 g | The sequence is ordered in ascending order |
 
-### Task 9. String Filtering
 
-Develop a module that filters a list of strings based on a substring.
+## Задание 9. Фильтрация строк
+Разработай модуль, который фильтрует список строк по подстроке.
 
-- The program reads the number of strings.
-- The program reads each new string into a list.
-- After reading all the strings, it provides a substring for filtering as input.
-- The program works with reference data types (List, String, Integer, etc.).
-- The program should return the list of strings containing the given substring.
-- You cannot use the Java Stream API.
-- You should implement your own filtering method.
+- Программа считывает количество строк.
+- Программа считывает каждую новую строку в список.
+- После считывания всех строк программе на вход подается подстрока для фильтрации.
+- Программа работает со ссылочными типами данных (List, String, Integer и т. д.).
+- Программа должна вывести список строк, в которых присутствует введенная подстрока.
+- Нельзя использовать Java Stream API.
+- Должна быть своя реализация метода фильтрации.
 
-|Input|**Output**|
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 4 <br/> First car <br/> Second door <br/> Third message <br/> Fourth wood <br/> oo | Second door, Fourth wood |
 | 2 <br/> First car <br/> Second door <br/> kek | |
 
-### Task 10. Finding Names of Adult Users
 
-Develop a module that finds the names of adult users.
+## Задание 10. Поиск имен совершеннолетних пользователей
 
-- Create a User class with two fields: a string for the user's name and an integer for the age.
-- The User class should be in a separate file.
-- The program reads the number of users.
-- Each user read is added to a list.
-- If a negative or zero age is entered, the program will print: "Incorrect input. Age <= 0" and moves on to the next input.
-- The program does not crash on wrong input; it prints: "Could not parse a number. Please try again" and repeats the input attempt.
-- The program should print the names of adult users.
-- The Java Stream API must be used.
-- The program uses reference data types.
+Разработай модуль, который ищет имена совершеннолетних пользователей.
 
-|**Input**|**Output**|
+- Создай класс User с двумя полями: строка с именем пользователя, целочисленный возраст.
+- Класс User должен быть в отдельном файле.
+- Программа считывает количество пользователей.
+- Каждый считанный пользователь добавляется в список.
+- Если ввели отрицательный или нулевой возраст, то программа выводит: «Incorrect input. Age <= 0» и переходит к следующему вводу.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Программа должна вывести имена совершеннолетних пользователей.
+- Должно использоваться Java Stream API.
+- Программа работает со ссылочными типами данных.
+
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 3 <br/> Name1 <br/> 16 <br/> Name2 <br/> 19 <br/> Name3 <br/> 18 | Name2, Name3 |
 | 3 <br/> Name1 <br/> 16 <br/> Name2 <br/> 14 <br/> Name3 <br/> 13  | |

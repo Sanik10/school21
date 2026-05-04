@@ -1,451 +1,261 @@
 # Project 02 — Java_Bootcamp
 
-**Summary:** In this project, you will learn how to apply OOP/procedural/multiparadigm approaches in Java, and you will also write code following the functional paradigm.
+Резюме: в этом проекте ты научишься применять ООП/процедурный/мультипарадигмальный подход в **Java**, а также напишешь код, придерживаясь функциональной парадигмы. 
 
-💡 [Click here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) to share your feedback on this project. It's anonymous and will help our team improve the training. We recommend filling out the survey right after completing the project.
+## Содержание
+1. [Chapter I](#chapter-i)   
+    - [Инструкция](#инструкция)   
+2. [Chapter II](#chapter-ii)  
+    - [Общая информация](#общая-информация)  
+3. [Chapter III](#chapter-iii)      
+    - [Проект: Pet Info](#проект-pet-info) 
+    - [Задание 1. Список питомцев](#задание-1-список-питомцев)  
+    - [Задание 2. Определение количества корма питомцу](#задание-2-определение-количества-корма-питомцу)  
+    - [Задание 3. Списки травоядных и всеядных питомцев](#задание-3-списки-травоядных-и-всеядных-питомцев) 
+    - [Задание 4. Увеличение возраста конкретных питомцев в функциональной парадигме](#задание-4-увеличение-возраста-конкретных-питомцев-в-функциональной-парадигме)  
+    - [Задание 5. Отслеживание прогулок питомцев](#задание-5-отслеживание-прогулок-питомцев)  
+    - [Задание 6. Итератор питомцев](#задание-6-итератор-питомцев)  
+ 
 
-## Contents
-
-- [Project 02 — Java\_Bootcamp](#project-02--java_bootcamp)
-  - [Contents](#contents)
-  - [Chapter I](#chapter-i)
-    - [Instructions](#instructions)
-  - [Chapter II](#chapter-ii)
-    - [General Information](#general-information)
-  - [Chapter III](#chapter-iii)
-    - [Project: Pet Info](#project-pet-info)
-      - [Task 1. Pet List](#task-1-pet-list)
-      - [Task 2. Determining the Amount of Pet Food](#task-2-determining-the-amount-of-pet-food)
-      - [Task 3. Lists of Herbivorous and Omnivorous Pets](#task-3-lists-of-herbivorous-and-omnivorous-pets)
-      - [Task 4. Increasing the Age of Certain Pets in the Functional Paradigm](#task-4-increasing-the-age-of-certain-pets-in-the-functional-paradigm)
-      - [Task 5. Tracking Pet Walks](#task-5-tracking-pet-walks)
-      - [Task 6. Pet Iterator](#task-6-pet-iterator)
 
 
 ## Chapter I
+## Инструкция
 
-### Instructions
-
-1. Throughout the course, you will experience uncertainty and a severe lack of information — this is normal. Remember that the repository and Google are always available to you, as are your peers and Rocket.Chat. Communicate. Search. Rely on common sense. Do not be afraid of making mistakes.
-1. Pay attention to sources of information. Verify, think, analyze, compare.
-1. Read the assignments carefully. Reread them several times.
-1. It's best to read the examples carefully as well. They may contain something not explicitly stated in the assignment itself.
-1. You might encounter inconsistencies when something new in the task or example contradicts what you already know. If that happens, try to figure it out. If you fail, make a note under “open questions” and resolve it during your work. Do not leave open questions unresolved.
-1. If a task seems unclear or unachievable, it only seems that way. Try decomposing it. Most likely, individual parts will become clearer.
-1. Along the way, you'll encounter many different tasks. Those marked with an asterisk (\*) are for more meticulous learners. They are of higher complexity and are not mandatory, but if you do them, you'll gain additional experience and knowledge.
-1. Do not try to fool the system or those around you. You'll only be fooling yourself.
-1. Have a question? Ask the neighbor on your right. If that doesn't help, ask the neighbor on your left.
-1. When using someone's help, always make sure you understand why, how, and what for. Otherwise, that help is meaningless.
-1. Always push only to the **develop** branch! The **master** branch will be ignored. Work in the **src** directory.
-1. Your directory should not contain any files other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай. 
+3. Внимательно читай задания. Перечитай несколько раз. 
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными. 
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными. 
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
 ## Chapter II
+## Общая информация
 
-### General Information
-
-**Topics to study:**
-
-- OOP/procedural/multiparadigm approach in Java;
-- Differences from C and C++;
-- Functional paradigm;
-- Asynchronous/parallel programming.
+### Темы для изучения:
+- ООП/процедурный/мультипарадигмальный подход в Java;
+- Отличия от C и C++;
+- Функциональная парадигма;
+- Асинхронное/параллельное программирование.
 
 ## Chapter III
+### Проект: Pet Info
+В этом проекте рассматриваются ООП/процедурные/мультипарадигмальные подходы в Java, написание кода в соответствии с функциональной парадигмой, а также асинхронное/параллельное программирование при помощи проекта, который представляет собой набор модулей для отображения информации о питомцах.
 
-### Project: Pet Info
+**Внимание!** Каждую задачу оформляй в качестве отдельного проекта. Например, `T02/src/exercise0`, `T02/src/exercise1`, ... , `T02/src/exerciseN-1`, где *N* — количество задач. Если предыдущее задание необходимо для следующего, просто скопируй предыдущий проект в директорию следующего и продолжай разработку в нем.
 
-We will explore OOP/procedural/multiparadigm approaches in Java, writing code according to the functional paradigm, as well as asynchronous/parallel programming through a project that is a set of modules for displaying information about pets.
+## Задание 1. Список питомцев
+Разработай модуль, который составляет список питомцев и выводит информацию о каждом питомце.
 
-**Attention!** Each task should be organized as a separate project. For example,
-`T02/src/exercise0`, `T02/src/exercise1`, … , `T02/src/exerciseN-1`, where **N** is the number of tasks. If a previous task is needed for the next one, simply copy the previous project into the directory for the next task and continue development there.
+- Создай абстрактный класс Animal с двумя private-полями: строка имени питомца, целочисленный возраст.
+- Реализуй конструктор для абстрактного класса Animal, который принимает два параметра: строка имени питомца, целочисленный возраст и присваивает соответствующим полям передаваемые значения.
+- Реализуй геттеры для private-полей: строка имени питомца, целочисленный возраст.
+- Создай класс Dog, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Dog, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Dog, чтобы формировалась следующая строка: «Dog name = [имя_питомца], age = [возраст_питомца]».
+- Создай класс Cat, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Cat, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Cat, чтобы формировалась следующая строка: «Cat name = [имя_питомца], age = [возраст_питомца]».
+- Программа считывает количество питомцев.
+- Программа считывает тип вводимого питомца: dog/cat.
+- Каждый питомец добавляется в общий список pets.
+- Если ввели неправильный тип питомца, то программа выводит: «Incorrect input. Unsupported pet type» и переходит к следующему вводу.
+- Если ввели отрицательный или нулевой возраст, то программа выводит: «Incorrect input. Age <= 0» и переходит к следующему вводу.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Программа должна вывести информацию о каждом питомце.
+- Программа работает со ссылочными типами данных.
 
-
-#### Task 1. Pet List
-
-Develop a module that compiles a list of pets and outputs information about each pet.
-
-- Create an abstract class Animal with two private fields: a String for the pet's name and an int for the pet's age.
-- Implement a constructor for the abstract class Animal that takes two parameters (pet name as a String, pet age as an int) and assigns these values to the corresponding fields.
-- Implement getters for the private fields (pet name as a String, pet age as an int).
-- Create a class Dog that inherits from the abstract class Animal.
-- Implement a constructor in Dog that takes two parameters (pet name as a String, pet age as an int) and passes them to the base class constructor.
-- Override the toString() method in Dog so that it produces the following string:
-
-  "Dog name = [pet\_name], age = [pet\_age]"
-
-- Create a class Cat that inherits from the abstract class Animal.
-- Implement a constructor in Cat that takes two parameters (pet name as a String, pet age as an int) and passes them to the base class constructor.
-- Override the toString() method in Cat so that it produces the following string:
-
-  "Cat name = [pet\_name], age = [pet\_age]"
-
-- The program reads the number of pets.
-- The program reads the type of the pet: dog/cat.
-- Each pet is added to a general pets list.
-- If an incorrect pet type is entered, the program outputs:
-
-  "Incorrect input. Unsupported pet type"
-
-  and proceeds to the next input.
-
-- If a negative or zero age is entered, the program outputs:
-
-  "Incorrect input. Age <= 0"
-
-  and proceeds to the next input.
-
-- The program should not terminate with an error on invalid input. Instead, it outputs:
-
-  "Could not parse a number. Please, try again"
-
-  and retries the input.
-
-- The program must output information about each pet.
-- The program works with reference data types.
-
-|**Input**|**Output**|
-| :- | :- |
+| Входные данные                                                                                                  | Выходные данные                                                                                               |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> dog <br/> Snowball2 <br/> 10 <br/> dog <br/> Snowball3 <br/> 9 <br/>  | Dog name = Snowball, age = 12 <br/> Dog name = Snowball2, age = 10 <br/> Dog name = Snowball3, age = 9 <br/>  |
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> cat <br/> Kitty <br/> 10 <br/> dog <br/> Balloon <br/> 9 <br/>        | Dog name = Snowball, age = 12 <br/> Cat name = Kitty, age = 10 <br/> Dog name = Balloon, age = 9 <br/>        |
 | 3 <br/> hamster <br/> cat <br/> Kitty <br/> -10 <br/> cat <br/> Fura <br/> 9 <br/>                              | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> Cat name = Fura, age = 9 <br/>     |
 
-#### Task 2. Determining the Amount of Pet Food
+## Задание 2. Определение количества корма питомцу
+Разработай модуль, который по типу питомца определяет, сколько граммов корма ему необходимо на 1 порцию.
 
-Develop a module that determines how many grams of food a pet needs per serving based on its type.
+- Создай абстрактный класс Animal с тремя private-полями: строка имени питомца, целочисленный возраст, вещественный вес питомца.
+- Реализуй конструктор для абстрактного класса Animal, который принимает три параметра: строка имени питомца, целочисленный возраст, вещественный вес питомца и присваивает соответствующим полям передаваемые значения.
+- Реализуй геттеры для private-полей: строка имени питомца, целочисленный возраст, вещественный вес питомца.
+- Объяви в абстрактном классе Animal метод `getFeedInfoKg()`, который возвращает вещественное количество корма.
+- Создай класс Dog, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Dog, который принимает три параметра: строка имени питомца, целочисленный возраст, вещественный вес питомца и передает их в конструктор базового класса.
+- Реализуй метод `getFeedInfoKg()` в классе Dog, который вычисляет количество необходимого корма по следующей формуле: `количество корма = масса питомца * 0.3`.
+- Переопредели метод `toString()` в классе Dog, чтобы формировалась следующая строка: «Dog name = [имя_питомца], age = [возраст_питомца], mass = [масса_питомца], feed = [порция_питомца]».
+- Создай класс Cat, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Cat, который принимает три параметра: строка имени питомца, целочисленный возраст, вещественный вес питомца и передает их в конструктор базового класса.
+- Реализуй метод `getFeedInfoKg()` в классе Cat, который вычисляет количество необходимого корма по следующей формуле: `количество корма = масса питомца * 0.1`.
+- Переопредели метод `toString()` в классе Cat, чтобы формировалась следующая строка: «Cat name = [имя_питомца], age = [возраст_питомца], mass = [масса_питомца], feed = [порция_питомца]».
+- Программа считывает количество питомцев.
+- Программа считывает тип вводимого питомца: dog/cat.
+- Каждый питомец добавляется в общий список pets.
+- Если ввели неправильный тип питомца, то программа выводит: «Incorrect input. Unsupported pet type» и переходит к следующему вводу.
+- Если ввели отрицательный или нулевой возраст, то программа выводит: «Incorrect input. Age <= 0» и переходит к следующему вводу.
+- Если ввели отрицательную или нулевую массу, то программа выводит: «Incorrect input. Mass <= 0» и переходит к следующему вводу.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Программа должна вывести информацию о каждом питомце и количество корма, которое ему необходимо.
+- Программа работает со ссылочными типами данных.
 
-- Create an abstract class Animal with three private fields: a String for the pet's name, an int for the pet's age, and a Double for the pet's weight.
-- Implement a constructor for the abstract class Animal that takes three parameters (pet name as a String, pet age as an int, pet weight as a double) and assigns them to the corresponding fields.
-- Implement getters for the private fields (pet name, pet age, pet weight).
-- Declare a method getFeedInfoKg() in the abstract class Animal that returns a double representing the amount of food needed.
-- Create a class Dog that inherits from the abstract class Animal.
-- Implement a constructor in Dog that takes three parameters (pet name, pet age, pet weight) and passes them to the base class constructor.
-- Implement the getFeedInfoKg() method in Dog, which calculates the required amount of food using the following formula:
-
-  food amount = pet weight \* 0.3
-
-- Override the toString() method in Dog to produce the following string:
-
-  "Dog name = [pet\_name], age = [pet\_age], mass = [pet\_weight], feed = [food\_portion]"
-
-- Create a class Cat that inherits from the abstract class Animal.
-- Implement a constructor in Cat that takes three parameters (pet name, pet age, pet weight) and passes them to the base class constructor.
-- Implement the getFeedInfoKg() method in Cat, which calculates the required amount of food using the following formula:
-
-  food amount = pet weight \* 0.1
-
-- Override the toString() method in Cat to produce the following string:
-
-  "Cat name = [pet\_name], age = [pet\_age], mass = [pet\_weight], feed = [food\_portion]"
-
-- The program reads the number of pets.
-- The program reads the pet type to be input: dog/cat.
-- Each pet is added to a common pets list.
-- If an incorrect pet type is entered, the program outputs:
-
-  "Incorrect input. Unsupported pet type"
-
-  and proceeds to the next input.
-
-- If a negative or zero age is entered, the program outputs:
-
-  "Incorrect input. Age <= 0"
-
-  and proceeds to the next input.
-
-- If a negative or zero weight is entered, the program outputs:
-
-  "Incorrect input. Mass <= 0"
-
-  and proceeds to the next input.
-
-- The program should not terminate with an error on invalid input. It should output:
-
-  "Could not parse a number. Please, try again"
-
-  and retry the input.
-
-- The program must output information about each pet and the amount of food it needs.
-- The program works with reference data types.
-
-
-|**Input**|**Output**|
-| :- | :- |
+| Входные данные                                                                                                                                | Выходные данные                                                                                                                                                                             |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> 5.0 <br/> dog <br/> Snowball2 <br/> 10 <br/> 10.0 <br/> dog <br/> Snowball3 <br/> 9 <br/> 9.0 <br/> | Dog name = Snowball, age = 12, mass = 5.00, feed = 1.50 <br/> Dog name = Snowball2, age = 10, mass = 10.00, feed = 3.00 <br/> Dog name = Snowball3, age = 9, mass = 9.00, feed = 2.70 <br/> |
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> 5.0 <br/> cat <br/> Kitty <br/> 10 <br/> 10.0 <br/> dog <br/> Balloon <br/> 9 <br/> 9.0 <br/>       | Dog name = Snowball, age = 12, mass = 5.00, feed = 1.50 <br/> Cat name = Kitty, age = 10, mass = 10.00, feed = 1.00 <br/> Dog name = Balloon, age = 9, mass = 9.00, feed = 2.70 <br/>       |
 | 4 <br/> hamster <br/> cat <br/> Kitty <br/> -10 <br/> dog <br/> Balloon <br/> 9 <br/> -9 <br/> cat <br/> Fura <br/> 9 <br/> 12.5 <br/>        | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> Incorrect input. Mass <= 0 <br/> Cat name = Fura, age = 9, mass = 12.50, feed = 1.25                             |
 
-#### Task 3. Lists of Herbivorous and Omnivorous Pets
+## Задание 3. Списки травоядных и всеядных питомцев
+Разработай модуль, который сначала выводит только травоядных животных, а затем только всеядных животных.
 
-Develop a module that first outputs only herbivorous animals and then only omnivorous animals.
+- Создай абстрактный класс Animal с двумя private-полями: строка имени питомца, целочисленный возраст.
+- Реализуй конструктор для абстрактного класса Animal, который принимает два параметра: строка имени питомца, целочисленный возраст и присваивает соответствующим полям передаваемые значения.
+- Реализуй геттеры для private-полей: строка имени питомца, целочисленный возраст.
+- Создай интерфейс Herbivore.
+- Объяви в интерфейсе Herbivore метод `chill()`, который возвращает строку.
+- Создай интерфейс Omnivore.
+- Объяви в интерфейсе Omnivore метод `hunt()`, который возвращает строку.
+- Создай класс Dog, который наследуется от абстрактного класса Animal и реализует интерфейс Omnivore.
+- Реализуй конструктор для класса Dog, который принимает два параметра: строка имени питомца, целочисленный возраст.
+- Конструктор класса Dog передает строку имени питомца и целочисленный возраст в конструктор базового класса.
+- В классе Dog реализуй метод `hunt()` таким образом, чтобы формировалась следующая строка: «I can hunt for robbers».
+- В классе Dog переопредели метод `toString()` таким образом, чтобы формировалась следующая строка: «Dog name = [имя_питомца], age = [возраст_питомца]. » + `hunt()`.
+- Создай класс Cat, который наследуется от абстрактного класса Animal и реализует интерфейс Omnivore.
+- Реализуй конструктор для класса Cat, который принимает два параметра: строка имени питомца, целочисленный возраст.
+- Конструктор класса Cat передает строку имени питомца и целочисленный возраст в конструктор базового класса.
+- В классе Cat реализуй метод `hunt()` таким образом, чтобы формировалась следующая строка: «I can hunt for mice».
+- В классе Cat переопредели метод `toString()` таким образом, чтобы формировалась следующая строка: «Cat name = [имя_питомца], age = [возраст_питомца]. » + `hunt()`.
+- Создай класс Hamster, который наследуется от абстрактного класса Animal и реализует интерфейс Herbivore.
+- Реализуй конструктор для класса Hamster, который принимает два параметра: строка имени питомца, целочисленный возраст.
+- Конструктор класса Hamster передает строку имени питомца и целочисленный возраст в конструктор базового класса.
+- В классе Hamster реализуй метод `chill()` таким образом, чтобы формировалась следующая строка: «I can chill for 8 hours».
+- В классе Hamster переопредели метод `toString()` таким образом, чтобы формировалась следующая строка: «Hamster name = [имя_питомца], age = [возраст_питомца]. » + `chill()`.
+- Создай класс GuineaPig, который наследуется от абстрактного класса Animal и реализует интерфейс Herbivore.
+- Реализуй конструктор для класса GuineaPig, который принимает два параметра: строка имени питомца, целочисленный возраст.
+- Конструктор класса GuineaPig передает строку имени питомца и целочисленный возраст в конструктор базового класса.
+- В классе GuineaPig реализуй метод `chill()` таким образом, чтобы формировалась следующая строка: «I can chill for 12 hours».
+- В классе GuineaPig переопредели метод `toString()` таким образом, чтобы формировалась следующая строка: «GuineaPig name = [имя_питомца], age = [возраст_питомца]. » + `chill()`.
+- Программа считывает количество питомцев.
+- Программа считывает тип вводимого питомца: dog/cat/hamster/guinea.
+- Каждый питомец добавляется в общий список pets.
+- Если ввели неправильный тип питомца, то программа выводит: «Incorrect input. Unsupported pet type» и переходит к следующему вводу.
+- Если ввели отрицательный или нулевой возраст, то программа выводит: «Incorrect input. Age <= 0» и переходит к следующему вводу.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Программа сначала должна вывести информацию обо всех травоядных питомцах, а потом обо всех всеядных питомцах.
+- Программа работает со ссылочными типами данных.
 
-- Create an abstract class Animal with two private fields: a String for the pet's name, and an int for the pet's age.
-- Implement a constructor in the abstract class Animal that takes two parameters (pet's name as a String, pet's age as an int) and assigns these values to the corresponding fields.
-- Implement getters for the private fields (pet's name and pet's age).
-- Create an interface Herbivore.
-- In the Herbivore interface, declare a method chill() that returns a String.
-- Create an interface Omnivore.
-- In the Omnivore interface, declare a method hunt() that returns a String.
-- Create a class Dog that inherits from the abstract class Animal and implements the Omnivore interface.
-  - Implement a constructor in Dog that takes two parameters (pet's name, pet's age).
-  - The Dog constructor should pass the pet's name and age to the base class constructor.
-  - In Dog, implement the hunt() method so that it produces the following string:
-
-    "I can hunt for robbers"
-
-  - In Dog, override the toString() method so that it produces the following string:
-
-    "Dog name = [pet\_name], age = [pet\_age]. " + hunt()
-
-- Create a class Cat that inherits from the abstract class Animal and implements the Omnivore interface.
-  - Implement a constructor in Cat that takes two parameters (pet's name, pet's age).
-  - The Cat constructor should pass the pet's name and age to the base class constructor.
-  - In Cat, implement the hunt() method so that it produces the following string:
-
-    "I can hunt for mice"
-
-  - In Cat, override the toString() method so that it produces the following string:
-
-    "Cat name = [pet\_name], age = [pet\_age]. " + hunt()
-
-- Create a class Hamster that inherits from the abstract class Animal and implements the Herbivore interface.
-  - Implement a constructor in Hamster that takes two parameters (pet's name, pet's age).
-  - The Hamster constructor should pass the pet's name and age to the base class constructor.
-  - In Hamster, implement the chill() method so that it produces the following string:
-
-    "I can chill for 8 hours"
-
-  - In Hamster, override the toString() method so that it produces the following string:
-
-    "Hamster name = [pet\_name], age = [pet\_age]. " + chill()
-
-- Create a class GuineaPig that inherits from the abstract class Animal and implements the Herbivore interface.
-  - Implement a constructor in GuineaPig that takes two parameters (pet's name, pet's age).
-  - The GuineaPig constructor should pass the pet's name and age to the base class constructor.
-  - In GuineaPig, implement the chill() method so that it produces the following string:
-
-    "I can chill for 12 hours"
-
-  - In GuineaPig, override the toString() method so that it produces the following string:
-
-    "GuineaPig name = [pet\_name], age = [pet\_age]. " + chill()
-
-- The program reads the number of pets.
-- The program reads the type of pet being entered: dog/cat/hamster/guinea.
-- Each pet is added to a common list pets.
-- If an incorrect pet type is entered, the program outputs:
-
-  "Incorrect input. Unsupported pet type"
-
-  and proceeds to the next input.
-
-- If a negative or zero age is entered, the program outputs:
-
-  "Incorrect input. Age <= 0"
-
-  and proceeds to the next input.
-
-- The program should not terminate with an error on invalid input. It outputs:
-
-  "Could not parse a number. Please, try again"
-
-  and retries the input.
-
-- The program must first output information about all herbivorous pets, then about all omnivorous pets.
-- The program works with reference data types.
-
-**Examples**
-
-|**Input**|**Output**|
-| :- | :- |
+| Входные данные                                                                                                                               | Выходные данные                                                                                                                                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 4 <br/> dog <br/> Snowball <br/> 12 <br/> guinea <br/> Piggy <br/> 5 <br/> cat <br/> Snowball <br/> 9 <br/> hamster <br/> Wave <br/> 2 <br/> | GuineaPig name = Piggy, age = 5. I can chill for 12 hours <br/> Hamster name = Wave, age = 2. I can chill for 8 hours <br/> Dog name = Snowball, age = 12. I can hunt for robbers <br/> Cat name = Snowball, age = 9. I can hunt for mice <br/> |
 | 2 <br/> dog <br/> Snowball <br/> 12  <br/> cat <br/> Kitty <br/> 10 <br/>                                                                    | Dog name = Snowball, age = 12. I can hunt for robbers <br/> Cat name = Kitty, age = 10. I can hunt for mice <br/>                                                                                                                                    |
 | 3 <br/> turtle <br/> cat <br/> Kitty <br/> -10 <br/> guinea <br/> Piggy <br/> 3 <br/>                                                        | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> GuineaPig name = Piggy, age = 3. I can chill for 12 hours <br/>                                           |
 
-#### Task 4. Increasing the Age of Certain Pets in the Functional Paradigm
 
-Develop a module that increases the age of pets older than 10 years, while adhering to the functional paradigm.
+## Задание 4. Увеличение возраста конкретных питомцев в функциональной парадигме
+Разработай модуль, который увеличивает возраст питомцев старше 10 лет, придерживаясь функциональной парадигмы.
 
-- Create an abstract class Animal with two private fields: a String for the pet's name, and an int for the pet's age.
-- Implement a constructor in the abstract class Animal that takes two parameters (pet's name as a String, pet's age as an int) and assigns these values to the corresponding fields.
-- Implement getters for the private fields (pet's name and pet's age).
-- Create a class Dog that inherits from the abstract class Animal.
-  - Implement a constructor in Dog that takes two parameters (pet's name, pet's age) and passes them to the base class constructor.
-  - Override the toString() method in Dog so that it produces the following string:
+- Создай абстрактный класс Animal с двумя private-полями: строка имени питомца, целочисленный возраст.
+- Реализуй конструктор для абстрактного класса Animal, который принимает два параметра: строка имени питомца, целочисленный возраст и присваивает соответствующим полям передаваемые значения.
+- Реализуй геттеры для private-полей: строка имени питомца, целочисленный возраст.
+- Создай класс Dog, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Dog, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Dog, чтобы формировалась следующая строка: «Dog name = [имя_питомца], age = [возраст_питомца]».
+- Создай класс Cat, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Cat, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Cat, чтобы формировалась следующая строка: «Cat name = [имя_питомца], age = [возраст_питомца]».
+- Программа считывает количество питомцев.
+- Программа считывает тип вводимого питомца: dog/cat.
+- Каждый питомец добавляется в общий список pets.
+- Если ввели неправильный тип питомца, то программа выводит: «Incorrect input. Unsupported pet type» и переходит к следующему вводу.
+- Если ввели отрицательный или нулевой возраст, то программа выводит: «Incorrect input. Age <= 0» и переходит к следующему вводу.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Программа должна увеличить возраст всех питомцев старше 10 лет на 1 год.
+- Программа должна вывести информацию о каждом питомце.
+- Программа работает со ссылочными типами данных.
+- Программа должна придерживаться функциональной парадигмы.
+- Программа должна использовать Stream API.
+- Запрещается использовать любые операторы повторения.
 
-    "Dog name = [pet\_name], age = [pet\_age]"
-
-- Create a class Cat that inherits from the abstract class Animal.
-  - Implement a constructor in Cat that takes two parameters (pet's name, pet's age) and passes them to the base class constructor.
-  - Override the toString() method in Cat so that it produces the following string:
-
-    "Cat name = [pet\_name], age = [pet\_age]"
-
-- The program reads the number of pets.
-- The program reads the type of the pet to be entered: dog/cat.
-- Each pet is added to a common list pets.
-- If an incorrect pet type is entered, the program outputs:
-
-  "Incorrect input. Unsupported pet type"
-
-  and proceeds to the next input.
-
-- If a negative or zero age is entered, the program outputs:
-
-  "Incorrect input. Age <= 0"
-
-  and proceeds to the next input.
-
-- The program should not terminate with an error on invalid input. It outputs:
-
-  "Could not parse a number. Please, try again"
-
-  and retries the input.
-
-- The program must increment the age of all pets older than 10 years by 1 year.
-- The program must then output information about each pet.
-- The program works with reference data types.
-- The program must adhere to the functional paradigm.
-- The program must use the Stream API.
-- The use of loop operators is prohibited.
-
-
-|**Input**|**Output**|
-| :- | :- |
+| Входные данные                                                                                                       | Выходные данные                                                                                                                        |
+|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> dog <br/> Snowball2 <br/> 8 <br/> dog <br/> Snowball3 <br/> 10 <br/>       | Dog name = Snowball, age = 13 <br/> Dog name = Snowball2, age = 8 <br/> Dog name = Snowball3, age = 10                                 |
 | 3 <br/> dog <br/> Snowball <br/> 8 <br/> cat <br/> Kitty <br/> 9 <br/> dog <br/> Balloon <br/> 9 <br/>               | Dog name = Snowball, age = 8 <br/> Cat name = Kitty, age = 9 <br/> Dog name = Balloon, age = 9 <br/>                                   |
 | 4 <br/> hamster <br/> cat <br/> Kitty <br/> -10 <br/> dog <br/> Balloon <br/> 10 <br/> cat <br/> Fura <br/> 9 <br/>  | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> Dog name = Balloon, age = 10 <br/> Cat name = Fura, age = 9 |
 
-#### Task 5. Tracking Pet Walks
-Develop a module that tracks the start and end time of a pet's walk.
+## Задание 5. Отслеживание прогулок питомцев
+Разработай модуль, который отслеживает время начала и завершения прогулки питомца.
 
-- Create an abstract class Animal with two private fields: a String for the pet's name and an int for the pet's age.
-- Implement a constructor in the abstract class Animal that takes two parameters (the pet's name as a String and the pet's age as an int) and assigns these values to the corresponding fields.
-- Implement getters for the private fields (pet's name and pet's age).
-- Declare a method double goToWalk() in the abstract class Animal.
-- Create a class Dog that inherits from the abstract class Animal.
-  - Implement a constructor in Dog that takes two parameters (the pet's name, the pet's age) and passes them to the base class constructor.
-  - Override the toString() method in Dog to produce the following string:
+- Создай абстрактный класс Animal с двумя private-полями: строка имени питомца, целочисленный возраст.
+- Реализуй конструктор для абстрактного класса Animal, который принимает два параметра: строка имени питомца, целочисленный возраст и присваивает соответствующим полям передаваемые значения.
+- Реализуй геттеры для private-полей: строка имени питомца, целочисленный возраст.
+- Объяви в абстрактном классе Animal метод `goToWalk()` метод `goToWalk()`, который возвращает вещественное время.
+- Создай класс Dog, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Dog, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Dog, чтобы формировалась следующая строка: «Dog name = [имя_питомца], age = [возраст_питомца]».
+- Переопредели метод `goToWalk()` в классе Dog следующим образом: метод вычисляет время прогулки в секундах, вызывает `TimeUnit.SECONDS.sleep()` для вычисленного времени, возвращает вычисленное время.
+- Создай класс Cat, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Cat, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Cat, чтобы формировалась следующая строка: «Cat name = [имя_питомца], age = [возраст_питомца]».
+- Переопредели метод `goToWalk()` в классе Cat следующим образом: метод вычисляет время прогулки в секундах, вызывает `TimeUnit.SECONDS.sleep()` для вычисленного времени, возвращает вычисленное время.
+- Вычисление времени прогулки для класса Dog выполняется по следующей формуле: `[время_прогулки] = [возраст_питомца] * 0,5`.
+- Вычисление времени прогулки для класса Cat выполняется по следующей формуле: `[время_прогулки] = [возраст_питомца] * 0,25`.
+- Программа считывает количество питомцев.
+- Программа считывает тип вводимого питомца: dog/cat.
+- Каждый питомец добавляется в общий список pets.
+- Если ввели неправильный тип питомца, то программа выводит: «Incorrect input. Unsupported pet type» и переходит к следующему вводу.
+- Если ввели отрицательный или нулевой возраст, то программа выводит: «Incorrect input. Age <= 0» и переходит к следующему вводу.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Программа должна вызвать метод `goToWalk()` у каждого питомца.
+- Каждый вызов метода `goToWalk()` должен выполняться асинхронно в отдельном потоке.
+- Программа должна дождаться выполнения всех вызовов метода `goToWalk()`, перед тем как завершиться.
+- При завершении прогулки программа должна выводить на одной строке в консоль следующую информацию: информация о питомце, время старта прогулки, время конца прогулки.
+- Время старта прогулки и время конца прогулки должны вычисляться относительно времени старта программы.
+- Программа работает со ссылочными типами данных.
+- Разница времени старта прогулки у питомцев относительно друг друга не должна быть больше 1 секунды.
 
-    "Dog name = [pet\_name], age = [pet\_age]"
-
-  - Override the goToWalk() method in Dog as follows:
-    - The method calculates the time to walk in seconds.
-    - It calls TimeUnit.SECONDS.sleep() for the calculated time.
-    - It returns the calculated time.
-- Create a class Cat that inherits from the abstract class Animal.
-  - Implement a constructor in Cat that takes two parameters (the pet's name, the pet's age) and passes them to the base class constructor.
-  - Override the toString() method in Cat to produce the following string:
-
-    "Cat name = [pet\_name], age = [pet\_age]"
-
-  - Override the goToWalk() method in Cat as follows:
-    - The method calculates the time to walk in seconds.
-    - It calls TimeUnit.SECONDS.sleep() for the calculated time.
-    - It returns the calculated time.
-- The walk time calculation for Dog is based on the following formula:
-
-  [walk\_time] = [pet\_age] \* 0.5
-
-- The walk time calculation for Cat is based on the following formula:
-
-  [walk\_time] = [pet\_age] \* 0.25
-
-- The program reads the number of pets.
-- The program reads the type of pet being entered: dog/cat.
-- Each pet is added to a common list pets.
-- If an incorrect pet type is entered, the program outputs:
-
-  "Incorrect input. Unsupported pet type"
-
-  and proceeds to the next input.
-
-- If a negative or zero age is entered, the program outputs:
-
-  "Incorrect input. Age <= 0"
-
-  and proceeds to the next input.
-
-- The program should not terminate with an error on invalid input. Instead, it outputs:
-
-  "Could not parse a number. Please, try again"
-
-  and retries the input.
-
-- The program must call the goToWalk() method for each pet.
-- Each call to goToWalk() must be made asynchronously in a separate thread.
-- The program must wait for all goToWalk() method calls to complete before exiting.
-- When the walk is finished, the program must print the following information to a line in the console: the pet's info, the start time of the walk, and the end time of the walk.
-- The start and end time of the walk must be calculated relative to the program start time.
-- The program works with reference data types.
-- The difference in walk start time between pets relative to each other must not exceed 1 second.
-
-
-|**Input**|**Output** |
-| :- | :- |
+| Входные данные                                                                                                        | Выходные данные                                                                                                                                                                                                     |
+|-----------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> dog <br/> Snowball2 <br/> 8 <br/> dog <br/> Snowball3 <br/> 10 <br/>        | Dog name = Snowball2, age = 8, start time = 0.20, end time = 4.20  <br/> Dog name = Snowball3, age = 10, start time = 0.30, end time = 5.30 <br/> Dog name = Snowball, age = 12, start time = 0.10, end time = 6.10 |
 | 3 <br/> dog <br/> Snowball <br/> 8 <br/> cat <br/> Kitty <br/> 9 <br/> dog <br/> Balloon <br/> 9 <br/>                | Cat name = Kitty, age = 9, start time = 0.20, end time = 2.45 <br/> Dog name = Snowball, age = 8, start time = 0.10, end time = 4.10 <br/> Dog name = Balloon, age = 9, start time = 0.30, end time = 4.80          |
 | 4 <br/> hamster <br/> cat <br/> Kitty <br/> -10 <br/> dog <br/> Balloon <br/> 11 <br/> cat <br/> Fura <br/> 9 <br/>   | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> Cat name = Fura, age = 9, start time = 0.20, end time = 2.45 <br/> Dog name = Balloon, age = 11, start time = 0.10, end time = 5.60      |
 
+## Задание 6. Итератор питомцев
+Разработай модуль, который реализует итератор питомцев.
 
-#### Task 6. Pet Iterator
+- Создай абстрактный класс Animal с двумя private-полями: строка имени питомца, целочисленный возраст.
+- Реализуй конструктор для абстрактного класса Animal, который принимает два параметра: строка имени питомца, целочисленный возраст и присваивает соответствующим полям передаваемые значения.
+- Реализуй геттеры для private полей: строка имени питомца, целочисленный возраст.
+- Создай класс Dog, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Dog, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Dog, чтобы формировалась следующая строка: «Dog name = [имя_питомца], age = [возраст_питомца]».
+- Создай класс Cat, который наследуется от абстрактного класса Animal.
+- Реализуй конструктор для класса Cat, который принимает два параметра: строка имени питомца, целочисленный возраст и передает их в конструктор базового класса.
+- Переопредели метод `toString()` в классе Cat, чтобы формировалась следующая строка: «Cat name = [имя_питомца], age = [возраст_питомца]».
+- Создай интерфейс BaseIterator.
+- Объяви в интерфейсе BaseIterator метод `next()`, который возвращает элемент типа T.
+- Объяви в интерфейсе BaseIterator метод `hasNext()`, который возвращает boolean.
+- Объяви в интерфейсе BaseIterator метод `reset()`, который ничего не возвращает.
+- Создай класс AnimalIterator, который реализует интерфейс BaseIterator.
+- В классе AnimalIterator объяви 2 private-поля: список животных, целочисленный индекс текущего элемента списка.
+- Реализуй конструктор для класса AnimalIterator, который принимает список животных и присваивает его соответствующему полю.
+- В классе AnimalIterator реализуй метод `next()` следующим образом: метод возвращает текущий элемент списка животных, а затем увеличивает индекс текущего элемента списка на единичку.
+- В классе AnimalIterator реализуй метод `hasNext()` следующим образом: метод возвращает true, если индекс текущего элемента списка меньше количества элементов списка животных, иначе false.
+- В классе AnimalIterator реализуй метод `reset()` следующим образом: метод сбрасывает значение индекса текущего элемента списка.
+- Программа считывает количество питомцев.
+- Программа считывает тип вводимого питомца: dog/cat.
+- Каждый питомец добавляется в общий список pets.
+- Если ввели неправильный тип питомца, то программа выводит: «Incorrect input. Unsupported pet type» и переходит к следующему вводу.
+- Если ввели отрицательный или нулевой возраст, то программа выводит: «Incorrect input. Age <= 0» и переходит к следующему вводу.
+- Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
+- Программа должна вывести информацию о каждом питомце.
+- Программа должна пройтись по списку питомцев pets с помощью итератора AnimalIterator.
+- Программа работает со ссылочными типами данных.
 
-Develop a module that implements an iterator for pets.
-
-1. Create an abstract class Animal with two private fields: a String for the pet's name and an int for the pet's age.
-2. Implement a constructor in the abstract class Animal that takes two parameters (the pet's name as a String and the pet's age as an int) and assigns them to the corresponding fields.
-3. Implement getters for the private fields (pet's name and pet's age).
-4. Create a class Dog that inherits from the abstract class Animal.
-   1. Implement a constructor in Dog that takes two parameters (the pet's name, the pet's age) and passes them to the base class constructor.
-   2. Override the toString() method in Dog so it produces the following string:
-
-      "Dog name = [pet\_name], age = [pet\_age]"
-
-5. Create a class Cat that inherits from the abstract class Animal.
-   1. Implement a constructor in Cat that takes two parameters (the pet's name, the pet's age) and passes them to the base class constructor.
-   2. Override the toString() method in Cat so it produces the following string:
-
-      "Cat name = [pet\_name], age = [pet\_age]"
-
-6. Create a BaseIterator interface.
-   1. In the BaseIterator interface, declare a method next(), that returns an element of type T.
-   2. In the BaseIterator interface, declare a method hasNext() that returns a boolean.
-   3. In the BaseIterator interface, declare a method reset() that returns nothing.
-7. Create an AnimalIterator class that implements the BaseIterator interface.
-   1. In AnimalIterator, declare 2 private fields: a list of animals and an integer index for the current element in the list.
-   2. Implement a constructor for AnimalIterator that takes the list of animals and assigns it to the corresponding field.
-   3. In AnimalIterator, implement the next() method as follows: this method returns the current element from the list of animals, then increments the current index by one.
-   4. In AnimalIterator, implement the hasNext() method as follows: this method returns true if the current index is less than the number of elements in the list of animals; otherwise, it returns false.
-   5. In AnimalIterator, implement the reset() method so that it resets the current index to zero.
-8. The program reads the number of pets.
-9. The program reads the type of pet to be entered: dog/cat.
-10. Each pet is added to a common list pets.
-11. If an incorrect pet type is entered, the program outputs:
-
-    "Incorrect input. Unsupported pet type"
-
-    and proceeds to the next input.
-
-12. If a negative or zero age is entered, the program outputs:
-
-    "Incorrect input. Age <= 0"
-
-    and proceeds to the next input.
-
-13. The program should not terminate with an error on invalid input. Instead, it outputs:
-
-    "Could not parse a number. Please, try again"
-
-    and retries the input.
-
-14. The program must output information about each pet.
-15. The program must iterate through the pets list using the AnimalIterator.
-16. The program works with reference data types.
-
-
-|**Input**|**Output**|
-| :- | :- |
+| Входные данные                                                                                                 | Выходные данные                                                                                              |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> dog <br/> Snowball2 <br/> 10 <br/> dog <br/> Snowball3 <br/> 9 <br/> | Dog name = Snowball, age = 12 <br/> Dog name = Snowball2, age = 10 <br/> Dog name = Snowball3, age = 9 <br/> |
 | 3 <br/> dog <br/> Snowball <br/> 12 <br/> cat <br/> Kitty <br/> 10 <br/> dog <br/> Balloon <br/> 9 <br/>       | Dog name = Snowball, age = 12 <br/> Cat name = Kitty, age = 10 <br/> Dog name = Balloon, age = 9 <br/>       |
 | 3 <br/> hamster <br/> cat <br/> Kitty <br/> -10 <br/> cat <br/> Fura <br/> 9 <br/>                             | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> Cat name = Fura, age = 9 <br/>    |
-
-
